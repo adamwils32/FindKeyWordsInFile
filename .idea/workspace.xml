@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ea2f431-414d-4bba-8bdb-d978ee7dfb8d" name="Changes" comment="" />
+    <list default="true" id="8ea2f431-414d-4bba-8bdb-d978ee7dfb8d" name="Changes" comment="Initial Commit">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MostFrequentEnglishWords.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AVLTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FindKeyWordInFile2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FindKeyWordsInFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2MszqrB3ttw5QMmHsYPwWe1plwS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -19,9 +40,51 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/adamw/IdeaProjects/FindKeyWordsInFile/src"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JAVA"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adamw\IdeaProjects\FindKeyWordsInFile\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adamw\IdeaProjects\FindKeyWordsInFile" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.FindKeyWordsInFile">
+    <configuration name="AVLTree" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AVLTree" />
+      <module name="FindKeyWordsInFile" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FindKeyWordsInFile" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FindKeyWordsInFile" />
+      <module name="FindKeyWordsInFile" />
+      <option name="PROGRAM_PARAMETERS" value="87 file2.txt MostFrequentEnglishWords.txt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="FindKeyWordInFile2" />
+          <option name="ENABLED" value="true" />
+          <option name="INCLUDE" value="false" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -31,6 +94,14 @@
       <option name="presentableId" value="Default" />
       <updated>1678571272615</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1678571308692</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678571308692</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -43,5 +114,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
 </project>
