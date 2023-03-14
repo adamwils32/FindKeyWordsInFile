@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ea2f431-414d-4bba-8bdb-d978ee7dfb8d" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MostFrequentEnglishWords.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AVLTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FindKeyWordInFile2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FindKeyWordsInFile.java" afterDir="false" />
+    <list default="true" id="8ea2f431-414d-4bba-8bdb-d978ee7dfb8d" name="Changes" comment="Made computeWordFrequencies method">
+      <change afterPath="$PROJECT_DIR$/file4.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AVLTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AVLTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FindKeyWordsInFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FindKeyWordsInFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,19 +32,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/adamw/IdeaProjects/FindKeyWordsInFile/src"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/adamw/IdeaProjects/FindKeyWordsInFile/src&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\adamw\IdeaProjects\FindKeyWordsInFile\src" />
@@ -72,7 +67,7 @@
     <configuration name="FindKeyWordsInFile" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FindKeyWordsInFile" />
       <module name="FindKeyWordsInFile" />
-      <option name="PROGRAM_PARAMETERS" value="87 file2.txt MostFrequentEnglishWords.txt" />
+      <option name="PROGRAM_PARAMETERS" value="3 file3.txt MostFrequentEnglishWords.txt" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="FindKeyWordInFile2" />
@@ -84,6 +79,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.AVLTree" />
+      <item itemvalue="Application.FindKeyWordsInFile" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -101,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678571308692</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Made computeWordFrequencies method">
+      <created>1678721803974</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678721803974</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,6 +123,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Made computeWordFrequencies method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made computeWordFrequencies method" />
   </component>
 </project>
