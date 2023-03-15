@@ -129,19 +129,19 @@ public class AVLTree<Key extends Comparable<Key>, Value> {
         return node;
     }
 
-    private ArrayList<String> inOrderTraversal(Node node, ArrayList<String> keys) {
+    private ArrayList<String> getKeys(Node node, ArrayList<String> keys) {
         if (node != null) {
-            inOrderTraversal(node.left, keys);
+            getKeys(node.left, keys);
             keys.add(node.key.toString());
-            inOrderTraversal(node.right, keys);
+            getKeys(node.right, keys);
         }
         return keys;
     }
 
     // Call this method from main:
-    public ArrayList<String> inOrderTraversal() {
+    public ArrayList<String> getKeys() {
         ArrayList<String> keys = new ArrayList<>();
-        return inOrderTraversal(root, keys);
+        return getKeys(root, keys);
     }
 
 
@@ -158,7 +158,7 @@ public class AVLTree<Key extends Comparable<Key>, Value> {
         tree.put(3, "mango");
         tree.put(6, "peach");
 
-        System.out.println("Inorder traversal: " + tree.inOrderTraversal());
+        System.out.println("Inorder traversal: " + tree.getKeys());
 
         System.out.println("Get value at key 4: " + tree.get(4));
     }

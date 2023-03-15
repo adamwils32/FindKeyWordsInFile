@@ -7,35 +7,30 @@ import java.util.PriorityQueue;
 
 public class FindKeyWordsInFile {
 
-    public static void main(String[] args) {
-        if (args.length != 3) {
-            System.err.println("Usage: java FindKeyWordsInFile k file.txt MostFrequentEnglishWords.txt");
-            System.exit(1);
-        }
 
-        int k = Integer.parseInt(args[0]);
-        String inputFileName = args[1];
-        String englishWordsFileName = args[2];
-        
-        AVLTree<String, Integer> wordFrequencies = new AVLTree<>();
-        AVLTree<String, Boolean> englishWords = new AVLTree<>();
-        AVLTree<String, Integer> keywordFrequencies = new AVLTree<>();
-        
+
+    private AVLTree<String, Integer> wordFrequencies;
+    private AVLTree<String, Boolean> englishWords;
+    public int k;
+    private AVLTree<String, Integer> keywordFrequencies;
+    public FindKeyWordsInFile(int k, String inputFileName, String englishWordsFileName) {
+
         try {
+            wordFrequencies = new AVLTree<>();
+            englishWords = new AVLTree<>();
+            this.k = k;
             //Part 1
             // function name => computeWordFrequencies(inputfile)
-            computeWordFrequencies(wordFrequencies, inputFileName);
+            this.computeWordFrequencies(inputFileName);
 
-            //System.out.println(wordFrequencies.inOrderTraversal().toString());
             //Part 2
             // function name => findKMostFrequentWords
-            ArrayList<String> keys = wordFrequencies.inOrderTraversal();
-            PriorityQueue<Entry> pq = findKMostFrequentWords(wordFrequencies, keys);
+            ArrayList<String> keys = wordFrequencies.getKeys();
+            PriorityQueue<Entry> pq = findKMostFrequentWords(keys);
 
             //Part 3
             // function name => filterCommonEnglishWords
-
-            keywordFrequencies = filterCommonEnglishWords(wordFrequencies, k, englishWords, englishWordsFileName);
+            this.keywordFrequencies = filterCommonEnglishWords(englishWordsFileName);
 
             int wordCount = 0;
             while (!(pq.isEmpty()) && wordCount < k) {
@@ -52,7 +47,15 @@ public class FindKeyWordsInFile {
         }
     }
 
-    private static void computeWordFrequencies(AVLTree<String, Integer> wordFrequencies, String inputfile) throws FileNotFoundException {
+    public static void main(String[] args){
+        if (args.length != 3) {
+            System.err.println("Usage: java FindKeyWordsInFile k file.txt MostFrequentEnglishWords.txt");
+            System.exit(1);
+        }
+        FindKeyWordsInFile findKeyWordsInFile = new FindKeyWordsInFile(Integer.parseInt(args[0]), args[1], args[2]);
+    }
+
+    public AVLTree<String, Integer> computeWordFrequencies(String inputfile) throws FileNotFoundException {
         Scanner scanner = new Scanner(new File(inputfile));
         while (scanner.hasNext()){
             String word = scanner.next().replaceAll("[^a-zA-Z ]", "").toLowerCase();
@@ -65,9 +68,10 @@ public class FindKeyWordsInFile {
                 wordFrequencies.put(word, wordFrequencies.get(word)+1);
             }
         }
+        return wordFrequencies;
     }
 
-    private static PriorityQueue<Entry> findKMostFrequentWords(AVLTree<String, Integer> wordFrequencies, ArrayList<String> keys){
+    public PriorityQueue<Entry> findKMostFrequentWords(ArrayList<String> keys){
 
         Comparator<Entry> comparator = (entry1, entry2) -> {
             Integer value1 = wordFrequencies.get(entry1.word);
@@ -86,14 +90,14 @@ public class FindKeyWordsInFile {
 
     }
 
-    private static AVLTree<String, Integer> filterCommonEnglishWords(AVLTree<String, Integer> wordFrequencies, int k, AVLTree<String, Boolean> englishWords, String englishWordsFileName) throws FileNotFoundException{
+    private AVLTree<String, Integer> filterCommonEnglishWords(String englishWordsFileName) throws FileNotFoundException{
         Scanner scanner = new Scanner(new File(englishWordsFileName));
         while (scanner.hasNext()){
             String word = scanner.next();
             englishWords.put(word, true);
         }
         AVLTree<String, Integer> filteredWordFrequencies = new AVLTree<>();
-        PriorityQueue<Entry> queue = findKMostFrequentWords(wordFrequencies, wordFrequencies.inOrderTraversal());
+        PriorityQueue<Entry> queue = this.findKMostFrequentWords(wordFrequencies.getKeys());
         int wordCount = 0;
         while (!(queue.isEmpty()) && wordCount < k) {
             Entry entry = queue.poll();
@@ -105,7 +109,9 @@ public class FindKeyWordsInFile {
         }
         return filteredWordFrequencies;
     }
-    private static class Entry {
+
+
+    public static class Entry {
         String word;
         Integer value;
 
@@ -113,6 +119,18 @@ public class FindKeyWordsInFile {
             this.word = word;
             this.value = value;
         }
+    }
+
+    public AVLTree<String, Integer> getWordFrequencies() {
+        return wordFrequencies;
+    }
+
+    public AVLTree<String, Boolean> getEnglishWords() {
+        return englishWords;
+    }
+
+    public AVLTree<String, Integer> getKeywordFrequencies() {
+        return keywordFrequencies;
     }
 }
 

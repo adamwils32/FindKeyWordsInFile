@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ea2f431-414d-4bba-8bdb-d978ee7dfb8d" name="Changes" comment="Made computeWordFrequencies method">
-      <change afterPath="$PROJECT_DIR$/file4.txt" afterDir="false" />
+    <list default="true" id="8ea2f431-414d-4bba-8bdb-d978ee7dfb8d" name="Changes" comment="findKMostFrequentWords completed, filterCommonEnglishWords completed">
+      <change afterPath="$PROJECT_DIR$/src/FindKeyWordsInFileTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AVLTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AVLTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FindKeyWordInFile2.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FindKeyWordsInFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FindKeyWordsInFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +37,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/adamw/IdeaProjects/FindKeyWordsInFile/src&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/adamw/IdeaProjects/Spell&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
@@ -56,7 +56,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FindKeyWordsInFile">
+  <component name="RunManager" selected="Application.FindKeyWordsInFileTest">
     <configuration name="AVLTree" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AVLTree" />
       <module name="FindKeyWordsInFile" />
@@ -64,25 +64,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FindKeyWordsInFile" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="FindKeyWordsInFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FindKeyWordsInFile" />
       <module name="FindKeyWordsInFile" />
-      <option name="PROGRAM_PARAMETERS" value="3 file3.txt MostFrequentEnglishWords.txt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="FindKeyWordInFile2" />
-          <option name="ENABLED" value="true" />
-          <option name="INCLUDE" value="false" />
-        </pattern>
-      </extension>
+      <option name="PROGRAM_PARAMETERS" value="7 file3.txt MostFrequentEnglishWords.txt" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FindKeyWordsInFileTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FindKeyWordsInFileTest" />
+      <module name="FindKeyWordsInFile" />
+      <option name="PROGRAM_PARAMETERS" value="5 file3.txt MostFrequentEnglishWords.txt" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.AVLTree" />
+      <item itemvalue="Application.FindKeyWordsInFileTest" />
       <item itemvalue="Application.FindKeyWordsInFile" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FindKeyWordsInFileTest" />
+        <item itemvalue="Application.FindKeyWordsInFile" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -107,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678721803974</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="findKMostFrequentWords completed, filterCommonEnglishWords completed">
+      <created>1678829239586</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678829239586</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,6 +139,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Made computeWordFrequencies method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made computeWordFrequencies method" />
+    <MESSAGE value="findKMostFrequentWords completed, filterCommonEnglishWords completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="findKMostFrequentWords completed, filterCommonEnglishWords completed" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FindKeyWordsInFileTest.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
