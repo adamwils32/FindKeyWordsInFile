@@ -1,26 +1,22 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Scanner;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class FindKeyWordsInFile {
 
-
-
-    private AVLTree<String, Integer> wordFrequencies;
+    public AVLTree<String, Integer> wordFrequencies;
     private AVLTree<String, Boolean> englishWords;
     public int k;
     private AVLTree<String, Integer> keywordFrequencies;
     public FindKeyWordsInFile(int k, String inputFileName, String englishWordsFileName) {
 
         try {
+            // initialize attributes of FindKeyWordsInFile object
             wordFrequencies = new AVLTree<>();
             englishWords = new AVLTree<>();
             this.k = k;
             //Part 1
-            // function name => computeWordFrequencies(inputfile)
+            // function name => computeWordFrequencies
             this.computeWordFrequencies(inputFileName);
 
             //Part 2
@@ -41,9 +37,9 @@ public class FindKeyWordsInFile {
                     System.out.println(word + " " + entry.value);
                 }
             }
-            
-        } catch (Exception e) {
-            e.printStackTrace();
+
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
         }
     }
 
@@ -53,9 +49,11 @@ public class FindKeyWordsInFile {
             System.exit(1);
         }
         FindKeyWordsInFile findKeyWordsInFile = new FindKeyWordsInFile(Integer.parseInt(args[0]), args[1], args[2]);
+
     }
 
-    public AVLTree<String, Integer> computeWordFrequencies(String inputfile) throws FileNotFoundException {
+    private AVLTree<String, Integer> computeWordFrequencies(String inputfile) throws FileNotFoundException {
+        // parses input file and puts a <String, Int> key-value pair into an AVLTree where String is a word and Int is its frequency in the file.
         Scanner scanner = new Scanner(new File(inputfile));
         while (scanner.hasNext()){
             String word = scanner.next().replaceAll("[^a-zA-Z ]", "").toLowerCase();
@@ -72,7 +70,8 @@ public class FindKeyWordsInFile {
     }
 
     public PriorityQueue<Entry> findKMostFrequentWords(ArrayList<String> keys){
-
+        // Returns a priority queue containing Entry objects in descending order, ordered by word frequency,
+        // where a word is Entry.word and its frequency is Entry.value
         Comparator<Entry> comparator = (entry1, entry2) -> {
             Integer value1 = wordFrequencies.get(entry1.word);
             Integer value2 = wordFrequencies.get(entry2.word);
@@ -86,11 +85,13 @@ public class FindKeyWordsInFile {
             priorityQueue.add(entry);
         }
 
+
         return priorityQueue;
 
     }
 
     private AVLTree<String, Integer> filterCommonEnglishWords(String englishWordsFileName) throws FileNotFoundException{
+        //parses common english words file and creates a new AVLTree<String, Int> which is the same as wordFrequencies but with the common english words filtered out.
         Scanner scanner = new Scanner(new File(englishWordsFileName));
         while (scanner.hasNext()){
             String word = scanner.next();
@@ -112,6 +113,7 @@ public class FindKeyWordsInFile {
 
 
     public static class Entry {
+        //container class for storing <word, frequency> pairs in the priority queue
         String word;
         Integer value;
 
@@ -123,10 +125,6 @@ public class FindKeyWordsInFile {
 
     public AVLTree<String, Integer> getWordFrequencies() {
         return wordFrequencies;
-    }
-
-    public AVLTree<String, Boolean> getEnglishWords() {
-        return englishWords;
     }
 
     public AVLTree<String, Integer> getKeywordFrequencies() {
